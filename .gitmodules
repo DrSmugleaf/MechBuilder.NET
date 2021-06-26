@@ -1,0 +1,3 @@
+[submodule "MechParser.NET"]
+	path = MechParser.NET
+	url = https://github.com/DrSmugleaf/MechParser.NET.git
