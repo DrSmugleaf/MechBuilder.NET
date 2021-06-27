@@ -2,7 +2,9 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MechParser.NET", "MechParser.NET", "{A195B81A-A842-4BCA-B81A-1507C93071F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmurfyImporter.NET", "MechParser.NET\SmurfyImporter.NET\SmurfyImporter.NET.csproj", "{7462AF6C-41E0-4A09-8B43-B488A4E4FBF9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MechParser.NET", "MechParser.NET\MechParser.NET\MechParser.NET.csproj", "{EB4BE7CA-4B70-4699-8880-0DB0B35DF5B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MechParser.NET.Tests", "MechParser.NET\MechParser.NET.Tests\MechParser.NET.Tests.csproj", "{E720EF4F-4CFE-4AC5-B424-99D4164114CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,12 +12,17 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{7462AF6C-41E0-4A09-8B43-B488A4E4FBF9} = {A195B81A-A842-4BCA-B81A-1507C93071F2}
+		{EB4BE7CA-4B70-4699-8880-0DB0B35DF5B1} = {A195B81A-A842-4BCA-B81A-1507C93071F2}
+		{E720EF4F-4CFE-4AC5-B424-99D4164114CA} = {A195B81A-A842-4BCA-B81A-1507C93071F2}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7462AF6C-41E0-4A09-8B43-B488A4E4FBF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7462AF6C-41E0-4A09-8B43-B488A4E4FBF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7462AF6C-41E0-4A09-8B43-B488A4E4FBF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7462AF6C-41E0-4A09-8B43-B488A4E4FBF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB4BE7CA-4B70-4699-8880-0DB0B35DF5B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB4BE7CA-4B70-4699-8880-0DB0B35DF5B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB4BE7CA-4B70-4699-8880-0DB0B35DF5B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB4BE7CA-4B70-4699-8880-0DB0B35DF5B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E720EF4F-4CFE-4AC5-B424-99D4164114CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E720EF4F-4CFE-4AC5-B424-99D4164114CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E720EF4F-4CFE-4AC5-B424-99D4164114CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E720EF4F-4CFE-4AC5-B424-99D4164114CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
