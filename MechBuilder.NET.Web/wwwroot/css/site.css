@@ -2,3 +2,11 @@
     background-color: rgb(42, 42, 42);
     font-size: 0.90rem;
 }
+
+.weapon-list {
+    max-height: 85vh;
+}
+
+.weapon-active {
+    background-color: green;
+}
