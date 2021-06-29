@@ -5,6 +5,10 @@ let mouseX;
 let mouseY;
 let dragIntervalId;
 
+function getWeaponName(weapon) {
+    return weapon.querySelector(".weapon-name-label").innerText;
+}
+
 function findWeapon(slot) {
     if (slot.innerHTML !== fillerText) {
         return slot;
@@ -60,9 +64,13 @@ function removeWeapon(div) {
     const filler = getFillerSlots(weapon);
 
     weapon.innerHTML = "&nbsp;";
+    weapon.classList.remove(weapon.dataset.typeClass);
+    weapon.dataset.typeClass = null;
 
     for (let slot of filler) {
         slot.innerHTML = "&nbsp;";
+        slot.classList.remove(slot.dataset.typeClass);
+        slot.dataset.typeClass = null;
     }
 }
 
@@ -96,10 +104,14 @@ function setSlot(slot, weapon) {
     }
 
     slot.innerText = weapon.innerText;
+    slot.dataset.typeClass = weapon.dataset.typeClass;
+    slot.classList.add(weapon.dataset.typeClass);
 
     for (let div of divsBelow) {
         removeWeapon(div)
         div.innerText = fillerText;
+        div.dataset.typeClass = weapon.dataset.typeClass;
+        div.classList.add(weapon.dataset.typeClass);
     }
 }
 
@@ -129,7 +141,7 @@ function updatePosition(event) {
         nameDiv.classList.add("p-1");
         nameDiv.style.backgroundColor = "#171717"
         nameDiv.id = "drag-image-id";
-        nameDiv.innerText = draggedWeapon.innerText;
+        nameDiv.innerText = getWeaponName(draggedWeapon);
 
         colDiv.appendChild(nameDiv)
 

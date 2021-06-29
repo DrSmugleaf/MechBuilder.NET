@@ -113,8 +113,11 @@
                     foreach (var weapon in Model.Weapons)
                     {
                         var weaponClass = Model.GetWeaponClass(weapon.Type);
-                        <li id="weapon-@weapon.Name" class="row border list-group-item list-group-item-action weapon-list-element m-0 mb-1 @weaponClass" data-slots="@weapon.Slots" data-type-class="@weaponClass" ondragstart="dragStart(event)">
-                            <label>@weapon.Name (@weapon.Slots)</label>
+                        <li id="weapon-@weapon.Name" class="border list-group-item list-group-item-action weapon-list-element m-0 mb-1 @weaponClass" data-slots="@weapon.Slots" data-type-class="@weaponClass" ondragstart="dragStart(event)">
+                            <div class="row">
+                                <label class="col-9 weapon-name-label">@weapon.Name</label>
+                                <label class="col">@weapon.Slots</label>
+                            </div>
                         </li>
                     }
                 }
