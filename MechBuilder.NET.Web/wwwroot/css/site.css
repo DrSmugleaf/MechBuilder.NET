@@ -11,6 +11,15 @@
 .weapon-list-element {
     font-size: 0.90rem;
     user-select: none;
+    cursor: pointer;
+}
+
+.weapon-list-element > div {
+    cursor: pointer;
+}
+
+.weapon-list-element > div > label {
+    cursor: pointer;
 }
 
 .ballistic-weapon {
