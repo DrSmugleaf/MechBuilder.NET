@@ -125,6 +125,8 @@ function updatePosition(event) {
         const nameDiv = document.createElement("div");
         nameDiv.classList.add("row");
         nameDiv.classList.add("border")
+        nameDiv.classList.add(draggedWeapon.dataset.typeClass)
+        nameDiv.classList.add("p-1");
         nameDiv.style.backgroundColor = "#171717"
         nameDiv.id = "drag-image-id";
         nameDiv.innerText = draggedWeapon.innerText;
@@ -136,6 +138,8 @@ function updatePosition(event) {
             const slotFiller = document.createElement("div");
             slotFiller.classList.add("row");
             slotFiller.classList.add("border")
+            slotFiller.classList.add("p-1");
+            slotFiller.classList.add(draggedWeapon.dataset.typeClass)
             slotFiller.style.backgroundColor = "#171717"
             slotFiller.innerText = fillerText;
             colDiv.appendChild(slotFiller);

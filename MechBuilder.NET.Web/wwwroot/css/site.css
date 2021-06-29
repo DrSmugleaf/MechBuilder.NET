@@ -9,5 +9,26 @@
 }
 
 .weapon-list-element {
+    font-size: 0.90rem;
     user-select: none;
+}
+
+.ballistic-weapon {
+    border-color: rebeccapurple !important;
+}
+
+.energy-weapon {
+    border-color: darkorange !important;
+}
+
+.missile-weapon {
+    border-color: limegreen !important;
+}
+
+.ams-weapon {
+    border-color: indianred !important;
+}
+
+.ecm-weapon {
+    border-color: yellowgreen !important;
 }
