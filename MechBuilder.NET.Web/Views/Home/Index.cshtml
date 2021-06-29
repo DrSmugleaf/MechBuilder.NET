@@ -4,126 +4,124 @@
     ViewBag.Title = "Home Page";
 }
 
-<div>
-    <div class="container">
-        <div class="row">
-            <div class="col-2">
+<div class="row">
+    <div class="col-2">
 
+    </div>
+    <div class="col-8">
+        <div class="row justify-content-center pt-5">
+            <div class="col-2">
+                <div class="text-center">Right Arm</div>
+                <div>
+                    @{
+                        for (var i = 0; i < 12; i++)
+                        {
+                            <div class="border p-1 slot empty-slot text-truncate" ondragover="allowDrop(event)" ondrop="dragDrop(event)">&nbsp;</div>
+                        }
+                    }
+                </div>
             </div>
-            <div class="col-8">
-                <div class="row justify-content-center pt-5">
-                    <div class="col-2">
-                        <div class="text-center">Right Arm</div>
+            <div class="col-2">
+                <div class="text-center">Right Torso</div>
+                <div>
+                    @{
+                        for (var i = 0; i < 12; i++)
+                        {
+                            <div class="border p-1 slot empty-slot text-truncate" ondragover="allowDrop(event)" ondrop="dragDrop(event)">&nbsp;</div>
+                        }
+                    }
+                </div>
+                <div class="row pt-4">
+                    <div class="col">
+                        <div class="text-center">Right Leg</div>
                         <div>
                             @{
                                 for (var i = 0; i < 12; i++)
                                 {
-                                    <div class="border p-1 slot empty-slot" ondragover="allowDrop(event)" ondrop="dragDrop(event)">&nbsp;</div>
-                                }
-                            }
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="text-center">Right Torso</div>
-                        <div>
-                            @{
-                                for (var i = 0; i < 12; i++)
-                                {
-                                    <div class="border p-1 slot empty-slot" ondragover="allowDrop(event)" ondrop="dragDrop(event)">&nbsp;</div>
-                                }
-                            }
-                        </div>
-                        <div class="row pt-4">
-                            <div class="col">
-                                <div class="text-center">Right Leg</div>
-                                <div>
-                                    @{
-                                        for (var i = 0; i < 12; i++)
-                                        {
-                                            <div class="border p-1 slot empty-slot" ondragover="allowDrop(event)" ondrop="dragDrop(event)">&nbsp;</div>
-                                        }
-                                    }
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="text-center">Head</div>
-                        <div>
-                            @{
-                                for (var i = 0; i < 6; i++)
-                                {
-                                    <div class="border p-1 slot empty-slot" ondragover="allowDrop(event)" ondrop="dragDrop(event)">&nbsp;</div>
-                                }
-                            }
-                        </div>
-                        <div class="row pt-4">
-                            <div class="col">
-                                <div class="text-center">Center</div>
-                                <div>
-                                    @{
-                                        for (var i = 0; i < 12; i++)
-                                        {
-                                            <div class="border p-1 slot empty-slot" ondragover="allowDrop(event)" ondrop="dragDrop(event)">&nbsp;</div>
-                                        }
-                                    }
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="text-center">Left Torso</div>
-                        <div>
-                            @{
-                                for (var i = 0; i < 12; i++)
-                                {
-                                    <div class="border p-1 slot empty-slot" ondragover="allowDrop(event)" ondrop="dragDrop(event)">&nbsp;</div>
-                                }
-                            }
-                        </div>
-                        <div class="row pt-4">
-                            <div class="col">
-                                <div class="text-center">Left Leg</div>
-                                <div>
-                                    @{
-                                        for (var i = 0; i < 12; i++)
-                                        {
-                                            <div class="border p-1 slot empty-slot" ondragover="allowDrop(event)" ondrop="dragDrop(event)">&nbsp;</div>
-                                        }
-                                    }
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="text-center">Left Arm</div>
-                        <div>
-                            @{
-                                for (var i = 0; i < 12; i++)
-                                {
-                                    <div class="border p-1 slot empty-slot" ondragover="allowDrop(event)" ondrop="dragDrop(event)">&nbsp;</div>
+                                    <div class="border p-1 slot empty-slot text-truncate" ondragover="allowDrop(event)" ondrop="dragDrop(event)">&nbsp;</div>
                                 }
                             }
                         </div>
                     </div>
                 </div>
             </div>
-            <ul class="col-2 overflow-auto mt-5 weapon-list">
-                @{
-                    foreach (var weapon in Model.Weapons)
-                    {
-                        var weaponClass = Model.GetWeaponClass(weapon.Type);
-                        <li id="weapon-@weapon.Name" class="border list-group-item list-group-item-action weapon-list-element m-0 mb-1 @weaponClass" data-slots="@weapon.Slots" data-type-class="@weaponClass" ondragstart="dragStart(event)">
-                            <div class="row">
-                                <label class="col-9 weapon-name-label">@weapon.Name</label>
-                                <label class="col">@weapon.Slots</label>
-                            </div>
-                        </li>
+            <div class="col-2">
+                <div class="text-center">Head</div>
+                <div>
+                    @{
+                        for (var i = 0; i < 6; i++)
+                        {
+                            <div class="border p-1 slot empty-slot text-truncate" ondragover="allowDrop(event)" ondrop="dragDrop(event)">&nbsp;</div>
+                        }
                     }
-                }
-            </ul>
+                </div>
+                <div class="row pt-4">
+                    <div class="col">
+                        <div class="text-center">Center</div>
+                        <div>
+                            @{
+                                for (var i = 0; i < 12; i++)
+                                {
+                                    <div class="border p-1 slot empty-slot text-truncate" ondragover="allowDrop(event)" ondrop="dragDrop(event)">&nbsp;</div>
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="text-center">Left Torso</div>
+                <div>
+                    @{
+                        for (var i = 0; i < 12; i++)
+                        {
+                            <div class="border p-1 slot empty-slot text-truncate" ondragover="allowDrop(event)" ondrop="dragDrop(event)">&nbsp;</div>
+                        }
+                    }
+                </div>
+                <div class="row pt-4">
+                    <div class="col">
+                        <div class="text-center">Left Leg</div>
+                        <div>
+                            @{
+                                for (var i = 0; i < 12; i++)
+                                {
+                                    <div class="border p-1 slot empty-slot text-truncate" ondragover="allowDrop(event)" ondrop="dragDrop(event)">&nbsp;</div>
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="text-center">Left Arm</div>
+                <div>
+                    @{
+                        for (var i = 0; i < 12; i++)
+                        {
+                            <div class="border p-1 slot empty-slot text-truncate" ondragover="allowDrop(event)" ondrop="dragDrop(event)">&nbsp;</div>
+                        }
+                    }
+                </div>
+            </div>
         </div>
     </div>
+    <ul class="col-2 overflow-auto mt-5 weapon-list">
+        @{
+            foreach (var weapon in Model.Weapons)
+            {
+                var weaponClass = Model.GetWeaponClass(weapon.Type);
+                <li id="weapon-@weapon.Name" class="row border list-group-item list-group-item-action weapon-list-element m-0 mb-1 p-1 @weaponClass make-pointer" data-slots="@weapon.Slots" data-type-class="@weaponClass" ondragstart="dragStart(event)">
+                    <div class="col make-pointer p-0">
+                        <div class="row make-pointe">
+                            <label class="col-9 weapon-name-label text-truncate make-pointer">@weapon.Name</label>
+                            <label class="col make-pointer">@weapon.Slots</label>
+                        </div>
+                    </div>
+                </li>
+            }
+        }
+    </ul>
 </div>
 @section Scripts {
     <script src="~/js/editor.js" asp-append-version="true"></script>

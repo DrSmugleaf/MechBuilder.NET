@@ -103,7 +103,7 @@ function setSlot(slot, weapon) {
         removeWeapon(slot)
     }
 
-    slot.innerText = weapon.innerText;
+    slot.innerText = getWeaponName(weapon);
     slot.dataset.typeClass = weapon.dataset.typeClass;
     slot.classList.add(weapon.dataset.typeClass);
 
@@ -139,6 +139,8 @@ function updatePosition(event) {
         nameDiv.classList.add("border")
         nameDiv.classList.add(draggedWeapon.dataset.typeClass)
         nameDiv.classList.add("p-1");
+        nameDiv.classList.add("filled-slot");
+        nameDiv.classList.add("text-truncate");
         nameDiv.style.backgroundColor = "#171717"
         nameDiv.id = "drag-image-id";
         nameDiv.innerText = getWeaponName(draggedWeapon);
@@ -151,6 +153,7 @@ function updatePosition(event) {
             slotFiller.classList.add("row");
             slotFiller.classList.add("border")
             slotFiller.classList.add("p-1");
+            slotFiller.classList.add("slot-filler");
             slotFiller.classList.add(draggedWeapon.dataset.typeClass)
             slotFiller.style.backgroundColor = "#171717"
             slotFiller.innerText = fillerText;
